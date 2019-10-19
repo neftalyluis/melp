@@ -1,6 +1,6 @@
 language: elixir
-elixir:  1.9.1
-otp_release: 22.0.7
+elixir:  1.9.2
+otp_release: 22.1.3
 script: mix check
 before_script:
   - travis_wait mix dialyzer --plt
