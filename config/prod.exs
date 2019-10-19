@@ -10,7 +10,7 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :melp, MelpWeb.Endpoint,
-  url: [scheme: "https", host: "melpex", port: 443],
+  url: [scheme: "https", host: "melpex.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]]
 
 # Do not print debug messages in production
