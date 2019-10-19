@@ -1,12 +1,17 @@
 language: elixir
-elixir:  1.9.2
+elixir: 1.9.2
 otp_release: 22.0.7
 services:
-  - postgresql
+- postgresql
 script: mix check
 before_script:
-  - travis_wait mix dialyzer --plt
+- travis_wait mix dialyzer --plt
 cache:
   directories:
-    - _build
-    - deps
+  - _build
+  - deps
+deploy:
+  provider: heroku
+  app: melpex
+  api_key:
+    secure: FMqyt9G1WPsKBA59NFOsIAz4JC2lMInVkQlcNg6F2LpRIz8qYQnJbJ+DA0Hb9oMlRotLYkeMOFzZBQ/dNfJKi2M2D60jPJ0/cm1en2WqOmEhOlH86s0V0FvG0cKqnXKH0VmyEd+XS2aOVrAcid7H1ZP9pZ88s4VJr6q0/U0nG94aHOEdU6xO7QuMNMMAwO89tavoVgoXXvYLbAGa2qwnqg2est0NqciBsuI74ipaXs4JEFw5YVIOHLhqGp5vMdNiS2/sHO02y+h6Y8WtP/CZPRtViCAa5beD9wOPTn08UMjjLtyewLgR5ay4+yjHcrJI/06fg9HoTyK50U9b91SlPR2Umn43Ze4IRS+oReL9SvrwMvK14TLlkZjHP6GLq0DMJUVJz5wusTrpGqqG+wueUnKYHTWieF48OuNBETHmO+FeDhI+sZTuplHMhrtocH61i9sRQNmLIaIbjrwtkgNI5HLqdR+0rML7uQOpkBz/0AS3UL0MGFk7+6ThoksNZwfHWcbyDURJ9k6TTh6qxQUhhBeo4bm0MeeMQSPZcJx7p6FCAyRnGVZfNOazzs7HOxq1A+vQHulF/mk3mgS+zVgEWxEhtURH3UPHNmAtL2uzqUA0oUxXLyQ1sWhgPni1HhzJ2i3KKTk4bGN7DG9rUPfct3boV9H1q1eQCSdbp+hft3k=
