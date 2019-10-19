@@ -20,6 +20,7 @@ defmodule MelpWeb.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
       alias MelpWeb.Router.Helpers, as: Routes
+      use ExSpec
 
       # The default endpoint for testing
       @endpoint MelpWeb.Endpoint

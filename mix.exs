@@ -12,8 +12,8 @@ defmodule Melp.MixProject do
       aliases: aliases(),
       deps: deps(),
       dialyzer: [plt_add_deps: :transitive],
-      build_embedded: Mix.env == :prod,
-      start_permanent: Mix.env == :prod
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod
     ]
   end
 
@@ -46,7 +46,8 @@ defmodule Melp.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:ex_check, "~> 0.11.0"},
       {:credo, "~> 1.1", only: :dev, runtime: false},
-      {:dialyxir, "~> 0.5.1", only: :dev, runtime: false}
+      {:dialyxir, "~> 0.5.1", only: :dev, runtime: false},
+      {:ex_spec, "~> 2.0", only: :test}
     ]
   end
 

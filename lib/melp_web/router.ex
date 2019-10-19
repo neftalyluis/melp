@@ -5,7 +5,8 @@ defmodule MelpWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", MelpWeb do
+  scope "/", MelpWeb do
     pipe_through :api
+    resources "/restaurants", RestaurantController
   end
 end
