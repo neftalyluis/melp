@@ -9,3 +9,4 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+Melp.Repo.insert_all(Melp.Restaurant, Melp.RestaurantsFeed.download())

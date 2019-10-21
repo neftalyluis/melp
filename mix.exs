@@ -47,7 +47,10 @@ defmodule Melp.MixProject do
       {:ex_check, "~> 0.11.0"},
       {:credo, "~> 1.1", only: :dev, runtime: false},
       {:dialyxir, "~> 0.5.1", only: :dev, runtime: false},
-      {:ex_spec, "~> 2.0", only: :test}
+      {:ex_spec, "~> 2.0", only: :test},
+      {:httpoison, "~> 1.6"},
+      {:nimble_csv, "~> 0.6"},
+      {:scrivener_ecto, "~> 2.0"}
     ]
   end
 
