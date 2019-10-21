@@ -7,7 +7,6 @@ defmodule Melp.Restaurant do
   @primary_key {:id, :binary_id, autogenerate: true}
   @required_fields [:rating, :name, :site, :email, :phone, :street, :city, :state, :lat, :lng]
 
-
   schema "restaurants" do
     field :rating, :integer
     field :name, :string

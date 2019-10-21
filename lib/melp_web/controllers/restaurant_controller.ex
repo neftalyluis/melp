@@ -38,13 +38,14 @@ defmodule MelpWeb.RestaurantController do
   end
 
   def update(conn, params) do
-
-    updated = Repo.get!(Restaurant, params["id"])
-    |> Restaurant.changeset(params)
-    |> Repo.update()
+    updated =
+      Repo.get!(Restaurant, params["id"])
+      |> Restaurant.changeset(params)
+      |> Repo.update()
 
     case updated do
-      {:ok, restaurant} -> render(conn, "show.json", restaurant: restaurant)
+      {:ok, restaurant} ->
+        render(conn, "show.json", restaurant: restaurant)
 
       {:error, %{errors: errors}} ->
         conn
